@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mehmet Emir Keleş | Kişisel Website</title>
+  <style>
+    :root { --bg:#0f1115; --fg:#f5f7fb; --muted:#c6cbd4; --accent:#2b7cff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial; background:var(--bg); color:var(--fg); }
+    a { color: var(--fg); text-decoration: none; }
+    .container { max-width: 1100px; margin:0 auto; padding: 28px 20px; }
+    header { display:grid; gap: 24px; align-items:center; }
+    .hero-wrap { width: 100%; display:flex; justify-content:center; }
+    /* Smaller FULL image (no crop) */
+    .hero-photo { width: min(100%, 340px); height: auto; border-radius: 16px; display:block; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+    h1 { margin: 8px 0 8px; font-size: clamp(28px, 2.6vw, 34px); line-height:1.2; }
+    .lead { color: var(--muted); max-width: 820px; line-height:1.6; }
+    .cta { margin-top: 14px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding: 10px 18px; border-radius: 12px; background: var(--accent); color:#fff; font-weight:600; box-shadow:0 6px 18px rgba(43,124,255,.3); }
+    .btn.secondary { background:#232733; color:#fff; }
+    section { margin: 44px 0; }
+    h2 { font-size: 24px; margin:0 0 12px; border-bottom:1px solid #2a2f3a; padding-bottom:8px; }
+    #projeler .content, #hakkimda .content, #egitim .content, #iletisim .content { max-width: 700px; }
+    .card { background:#161a22; border:1px solid #242a36; border-radius:14px; padding:14px; }
+    .card h3 { margin:0 0 6px; font-size:18px; }
+    .card p { margin:0; color:var(--muted); line-height:1.6; }
+    .card a { color:#8cb6ff; text-decoration:underline; }
+    .socials { display:flex; gap:14px; flex-wrap:wrap; }
+    footer { border-top:1px solid #222735; margin-top:46px; padding-top:16px; color:#9aa3b2; font-size:14px; text-align:center; }
+    /* Responsive two-column on wide screens */
+    @media (min-width: 980px){
+      header { grid-template-columns: 360px 1fr; }
+      .hero-wrap { justify-content:flex-start; }
+      .cta { justify-content:flex-start; }
+    }
+    /* Floating mail button bottom-right */
+    .float-mail {
+      position: fixed; right: 18px; bottom: 18px; z-index: 50;
+      background: var(--accent); color:#fff; padding: 12px 16px; border-radius: 999px;
+      font-weight: 700; box-shadow: 0 10px 24px rgba(43,124,255,.45);
+    }
+  
+    html { scroll-behavior: smooth; }
+    .topnav {
+      position: sticky; top: 0; z-index: 1000;
+      backdrop-filter: blur(6px);
+      background: rgba(15,17,21,0.7);
+      border-bottom: 1px solid #222735;
+    }
+    .topnav .inner {
+      max-width: 1100px; margin: 0 auto; padding: 10px 20px;
+      display:flex; gap:18px; align-items:center; justify-content:space-between;
+    }
+    .brand { font-weight:800; letter-spacing:.2px; }
+    .links { display:flex; gap:14px; flex-wrap:wrap; }
+    .links a { color:#dbe2ee; font-size:14px; }
+    .links a:hover { text-decoration:underline; }
+    section { scroll-margin-top: 70px; }
+
+  
+    /* Contact key-value layout */
+    .kv { display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; align-items: center; }
+    .kv .k { color: var(--muted); }
+    .kv .v a { color: #8cb6ff; text-decoration: underline; }
+
+  </style>
+</head>
+<body id="top">
+
+  <nav class="topnav">
+    <div class="inner">
+      <div class="brand">Mehmet Emir Keleş</div>
+      <div class="links">
+        <a href="#top">Anasayfa</a>
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#egitim">Eğitim</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
+    </div>
+  </nav>
+
+  <a class="float-mail" href="mailto:memirxx@gmail.com" aria-label="E‑posta gönder">Mail Gönder</a>
+
+  <div class="container">
+    <header>
+      <div class="hero-wrap">
+        <!-- FULL photo, smaller width -->
+        <img class="hero-photo" src="profil.jpg" alt="Mehmet Emir Keleş profil fotoğrafı"/>
+      </div>
+      <div>
+        <h1>Merhaba! Ben Mehmet Emir Keleş</h1>
+        <p class="lead">
+          Sürekli öğrenmeye ve kendimi geliştirmeye önem veriyorum. Edindiğim bilgi ve deneyimleri paylaşarak
+          çevremdekilerin gelişimine de katkıda bulunmayı kişisel vizyonumun önemli bir parçası olarak görüyorum.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projeler">Projelere Göz At</a>
+          <a class="btn secondary" href="#iletisim">İletişime Geç</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="hakkimda">
+      <h2>Hakkımda</h2>
+      <div class="content">
+        <p>
+          Merhaba, ben Mehmet Emir Keleş. CCNA sertifikasına hazırlanıyorum, ağ teknolojileri ve Linux sistemleri üzerine çalışıyorum.
+          Günlük olarak Packet Tracer ve Wireshark üzerinde pratik yapıyorum. Linux (özellikle Arch) üzerinde özelleştirilmiş projeler geliştiriyorum ve kendi güvenlik aracım olan <strong>MEK Security</strong> üzerinde çalışıyorum.
+          <br><br>
+          Amacım güçlü bir Network Manager olarak kariyer yapmak ve kendi geliştirdiğim araçlarla sistem güvenliğini ileri taşımak.
+          Bilgiyi paylaşmayı, öğrenmeyi ve üretmeyi seviyorum. Uzun vadede kendi Linux dağıtımımı (<strong>MEKOS</strong>) geliştirerek özgün bir sistem yaratmayı hedefliyorum.
+        </p>
+      </div>
+    </section>
+
+    <section id="egitim">
+      <h2>Eğitim</h2>
+      <div class="content">
+        <div class="card">
+          <h3 style="margin:0;">Lise</h3>
+          <p class="mt-2">Eskişehir Gelişim Koleji (2014–2018)</p>
+        </div>
+        <div class="card" style="margin-top:12px;">
+          <h3 style="margin:0;">Üniversite</h3>
+          <p class="mt-2">Hacettepe Üniversitesi (2019–2024)<br/>Jeoloji Mühendisliği Lisans Programı</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projeler">
+      <h2>Projeler</h2>
+      <div class="content">
+        <div class="card">
+          <h3>MEK Security 2.0</h3>
+          <p>Kendi geliştirdiğim ağ güvenliği aracı. MITM saldırı tespit ve engelleme, loglama ve daha fazlası.</p>
+          <p style="margin-top:8px;"><a href="https://github.com/MehmetEmirKeles/mek-security-2.0" target="_blank" rel="noopener">Kaynak Kodu</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim">
+      <h2>İletişim</h2>
+      <div class="content">
+<div class="kv">
+  <div class="k">E‑posta</div>
+  <div class="v"><a href="mailto:memirxx@gmail.com">memirxx@gmail.com</a></div>
+  <div class="k">Telefon</div>
+  <div class="v"><a href="tel:+905325981189">0 532 598 11 89</a></div>
+</div>
+<div class="socials" style="margin-top:14px;">
+  <a href="https://github.com/MehmetEmirKeles" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://www.linkedin.com/in/mehmet-emir-kele%C5%9F-894656227/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://instagram.com/mehmetemirkeles" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
+    </section>
+
+    <footer>
+      © 2025 Mehmet Emir Keleş. Tüm hakları saklıdır.
+    </footer>
+  </div>
+</body>
+</html>
